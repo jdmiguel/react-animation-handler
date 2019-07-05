@@ -1,0 +1,119 @@
+.room_mask{
+  width: 500px;
+  height: 350px;
+  overflow: hidden;
+  margin: 25px auto 40px;
+  border-bottom: 1px solid #cfc7aa;
+}
+
+.room_corners{
+  width: 500px;
+  height: 350px;
+  -webkit-box-shadow: inset 3px 0px 51px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: inset 3px 0px 51px 0px rgba(0,0,0,0.5);
+  box-shadow: inset 3px 0px 51px 0px rgba(0,0,0,0.5);
+  position: absolute;
+  left: calc(50% - 250px); 
+  top: 0; 
+  z-index: 1;
+}
+
+.room{
+  width: 500px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #cfc7aa;
+}
+
+figure{
+  width: 300px;
+  height: 300px;
+  position: relative;
+  align-self: flex-end;
+}
+
+.graphic-svg{
+  position: absolute;
+}
+
+.poster{
+  top: 0;
+  left: 0;
+}
+
+.clock{
+  top: 20px;
+  left: 152px;
+}
+
+.bookshelves{
+  top: 23px;
+  left: 150px;
+}
+
+.books{
+  top: 23px;
+  left: 150px;
+  overflow: visible;
+}
+
+.paperbin{
+  bottom: 0;
+  left: 30px;
+}
+
+.guy{
+  bottom: 0;
+  right: 0;
+}
+
+.hour-needle.active{
+  transform-origin: 50%;
+  animation: time 60s linear 0s infinite forwards;
+}
+
+.minute-needle.active{
+  transform-origin: 50%;
+  animation: time 10s linear 0s infinite forwards;
+}
+
+@keyframes time {
+  from {transform: rotate(0)}
+  to {transform: rotate(360deg)}
+}
+
+#btn-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeIn 0.5s ease-out 6s 1 forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; visibility: hidden;}
+  to {opacity: 1; visibility: visible;}
+}
+
+button{
+  width: 135px;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+  background: #212121;
+  border: none;
+  border-radius: 3px;
+  color: #DEDEDE;
+  margin: 0 auto 10px;
+  transition: all 0.3s ease-out;
+}
+
+button:hover{
+  letter-spacing: 0.5px;
+  background: #454545;
+}
+
